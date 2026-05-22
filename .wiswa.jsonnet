@@ -3,7 +3,7 @@ local utils = import 'utils.libsonnet';
 {
   uses_user_defaults: true,
   project_name: 'wiswa-mcp',
-  version: '0.0.0',
+  version: '0.0.1',
   description: 'FastMCP server exposing Wiswa settings discovery for AI assistants.',
   keywords: ['command line', 'fastmcp', 'mcp', 'settings', 'wiswa'],
   primary_module: 'wiswa',
