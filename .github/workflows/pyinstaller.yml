@@ -16,7 +16,7 @@ jobs:
           python-version: '3.13'
       - if: matrix.os == 'windows-11-arm'
         name: 'Cache vcpkg installed packages'
-        uses: 'actions/cache@v6.0.0'
+        uses: 'actions/cache@v6.1.0'
         with:
           key: vcpkg-arm64-windows-openssl-${{ hashFiles('.github/workflows/pyinstaller.yml') }}
           path: '~/vcpkg/installed'
@@ -213,7 +213,7 @@ jobs:
           path: |
             ${{ matrix.dist_path }}
       - name: 'Attest'
-        uses: 'actions/attest@v4.1.0'
+        uses: 'actions/attest@v4.1.1'
         with:
           subject-path: '${{ matrix.dist_path }}'
       - name: 'Generate SBOM'
@@ -226,7 +226,7 @@ jobs:
           output-file: 'sbom.spdx.json'
           upload-artifact: false
       - name: 'Attest SBOM'
-        uses: 'actions/attest@v4.1.0'
+        uses: 'actions/attest@v4.1.1'
         with:
           subject-path: '${{ matrix.dist_path }}'
           sbom-path: 'sbom.spdx.json'
@@ -245,12 +245,12 @@ jobs:
         shell: pwsh
       - if: github.ref_type == 'tag'
         name: 'Attest'
-        uses: 'actions/attest@v4.1.0'
+        uses: 'actions/attest@v4.1.1'
         with:
           subject-path: '_out/*.zip'
       - if: github.ref_type == 'tag'
         name: 'Attest SBOM'
-        uses: 'actions/attest@v4.1.0'
+        uses: 'actions/attest@v4.1.1'
         with:
           subject-path: '_out/*.zip'
           sbom-path: 'sbom.spdx.json'
