@@ -9,8 +9,9 @@ import json
 import re
 
 from fastmcp import FastMCP
-from wiswa.tool.utils.jsonnet import resolve_defaults_only
 import niquests
+
+from wiswa.tool.utils.jsonnet import resolve_defaults_only
 
 __all__ = ('clear_resolved_defaults_cache', 'mcp')
 
@@ -21,7 +22,7 @@ _IDENT_RE = re.compile(r'^[a-zA-Z_][a-zA-Z0-9_]*$')
 
 
 async def _get_defaults() -> dict[str, Any]:
-    global _resolved_defaults  # noqa: PLW0603
+    global _resolved_defaults  # ruff: ignore[global-statement]
     if _resolved_defaults is None:
         marker = importlib.resources.files('wiswa.jsonnet') / 'defaults.libsonnet'
         with importlib.resources.as_file(marker) as defaults_file:
@@ -33,7 +34,7 @@ async def _get_defaults() -> dict[str, Any]:
 
 def clear_resolved_defaults_cache() -> None:
     """Forget lazily loaded Jsonnet defaults (for tests and development server reload)."""
-    global _resolved_defaults  # noqa: PLW0603
+    global _resolved_defaults  # ruff: ignore[global-statement]
     _resolved_defaults = None
 
 

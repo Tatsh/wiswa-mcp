@@ -5,6 +5,8 @@ from typing import TYPE_CHECKING, Any
 from unittest.mock import AsyncMock
 import json
 
+import pytest
+
 from wiswa.mcp.server import (
     clear_resolved_defaults_cache,
     get_defaults,
@@ -12,7 +14,6 @@ from wiswa.mcp.server import (
     lookup_setting,
     search_settings,
 )
-import pytest
 
 if TYPE_CHECKING:
     from collections.abc import Iterator
