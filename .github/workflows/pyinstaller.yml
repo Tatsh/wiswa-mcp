@@ -57,6 +57,11 @@ jobs:
           Add-Content -Path $env:GITHUB_ENV -Value "LIB=$installed\lib$sep$env:LIB"
           Add-Content -Path $env:GITHUB_ENV -Value "INCLUDE=$installed\include$sep$env:INCLUDE"
         shell: 'pwsh'
+      - if: runner.os == 'macOS'
+        name: 'Link OpenSSL statically'
+        run: |
+          echo 'OPENSSL_STATIC=1' >> "$GITHUB_ENV"
+        shell: 'bash'
       - if: runner.os == 'Windows'
         name: 'Shorten uv cache path'
         run: |
