@@ -4,12 +4,12 @@ requires = ["hatchling"]
 
 [dependency-groups]
 dev = [
-  "commitizen>=4.18.0",
+  "commitizen>=4.19.0",
   "cz-path>=0.0.7",
   "mypy>=2.3.1",
   "ruff==0.16.9",
-  "ty>=0.0.78",
-  "yapf>=0.43.0",
+  "ty>=0.0.84",
+  "yapf>=0.43.0"
 ]
 docs = [
   "autodoc-pydantic>=2.2.0",
@@ -21,7 +21,7 @@ docs = [
   "sphinx-datatables>=1.0.0",
   "sphinx-immaterial>=0.13.9",
   "sphinx>=9.1.0; python_version >= \"3.13\"",
-  "tomlkit>=0.15.1",
+  "tomlkit>=0.15.1"
 ]
 tests = [
   "coveralls>=4.1.0",
@@ -29,7 +29,7 @@ tests = [
   "pytest-asyncio>=1.4.0",
   "pytest-cov>=7.1.0",
   "pytest-mock>=3.15.1",
-  "pytest>=9.1.1",
+  "pytest>=9.1.1"
 ]
 
 [project]
@@ -42,14 +42,14 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: 3.14",
-  "Typing :: Typed",
+  "Typing :: Typed"
 ]
 dependencies = [
   "bascom>=0.2.0",
-  "fastmcp>=4.0.2",
-  "niquests>=3.21.1",
+  "fastmcp>=4.0.10",
+  "niquests>=3.21.2",
   "typing-extensions>=4.16.0",
-  "wiswa>=0.4.0",
+  "wiswa>=0.4.0"
 ]
 description = "FastMCP server exposing Wiswa settings discovery for AI assistants."
 keywords = ["command line", "fastmcp", "mcp", "settings", "wiswa"]
@@ -86,7 +86,7 @@ version_files = [
   "package.json",
   "sh.tat.wiswa-mcp.yml",
   "snapcraft.yaml",
-  "wiswa/mcp/__init__.py",
+  "wiswa/mcp/__init__.py"
 ]
 version_provider = "pep621"
 
@@ -98,7 +98,7 @@ omit = [
   "tests/*/test_*.py",
   "tests/test_*.py",
   "wiswa/mcp/__main__.py",
-  "wiswa/mcp/main.py",
+  "wiswa/mcp/main.py"
 ]
 show_missing = true
 
@@ -110,7 +110,7 @@ omit = [
   "tests/*/test_*.py",
   "tests/test_*.py",
   "wiswa/mcp/__main__.py",
-  "wiswa/mcp/main.py",
+  "wiswa/mcp/main.py"
 ]
 
 [tool.doc8]
@@ -182,7 +182,7 @@ ignore = [
   "missing-trailing-comma",
   "multi-line-summary-first-line",
   "subprocess-without-shell-equals-true",
-  "suspicious-subprocess-import",
+  "suspicious-subprocess-import"
 ]
 preview = true
 
