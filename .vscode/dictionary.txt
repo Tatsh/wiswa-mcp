@@ -53,6 +53,7 @@ lastexitcode
 launchable
 lextudio
 libera
+librsvg
 libsonnet
 linters
 manylinux
@@ -94,6 +95,7 @@ pythonhosted
 regen
 ripgreprc
 rstcheck
+rsvg
 sbclaude
 schemafile
 sdist
